@@ -1,5 +1,5 @@
 const TimeTable = () => {
-    return(
+    return (
         <div>TimeTable</div>
     )
 }
