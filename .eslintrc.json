@@ -21,7 +21,8 @@
         "plugin:react/jsx-runtime",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "prettier/@typescript-eslint",
-        "prettier"
+        "prettier",
+        "plugin:storybook/recommended"
     ],
     "rules": {
         "react-hooks/rules-of-hooks": "error",
