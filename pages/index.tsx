@@ -13,7 +13,6 @@ export default function Home() {
 		<div className={styles.container}>
 			<Head>
 				<link rel='icon' href='%PUBLIC_URL%/favicon.ico' />
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='apple-touch-icon' href='%PUBLIC_URL%/android-chrome-192x192.png' />
 				<link rel='manifest' href='%PUBLIC_URL%/manifest.json' />
 				<meta name="description" content="Busdes!【衣笠】衣笠生向けバスアプリ" />
