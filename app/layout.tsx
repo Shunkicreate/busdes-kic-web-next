@@ -4,7 +4,7 @@ export const metadata: Metadata = {
 	title: 'Busdes!【衣笠】',
 	description: 'Busdes!【衣笠】衣笠生向けバスアプリ',
 	themeColor: '#F8F8F8',
-	manifest: '%PUBLIC_URL%/manifest.json',
+	manifest: '/manifest.json',
 	icons: [
 		{ rel: 'icon', type: 'image/png', sizes: '16x16', url: '/favicon-16x16.png' },
 		{ rel: 'icon', type: 'image/png', sizes: '32x32', url: '/favicon-32x32.png' },
