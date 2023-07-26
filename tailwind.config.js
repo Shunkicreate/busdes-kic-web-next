@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,12 +9,21 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        main: '#FFE600',
+        border: '#BFBEC5',
+        contentText: '#555555',
+        hiddenText: '#0000004d',
+        bgColor: '#F8F8F8',
+        buttonOnClick: '#E8D000',
       },
+      zIndex: {
+        '-10': '-10',
+      }
     },
   },
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
   plugins: [],
 }
