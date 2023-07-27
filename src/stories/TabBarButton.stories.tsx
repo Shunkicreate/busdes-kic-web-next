@@ -8,10 +8,9 @@ export default {
 
 export const Default = {
 	args: {
-		size: 'medium',
-		label: '時刻表',
+		label: '次のバス',
 		alt: '路線追加ページへのボタンの画像',
-		src: '/images/calenderBadge.svg',
+		src: '/images/timer.svg',
 		selected: true,
 	},
 }
