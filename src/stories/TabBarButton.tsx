@@ -13,7 +13,7 @@ const addSelected = (str: string, execute: boolean) => {
 const TabBarButton = (props: TabBarButtonProps) => {
 	const { size, label, alt, src, backgroundColor, selected, onClick } = props
 	return (
-		<div className='w-32 h-12 pt-1 flex-col justify-center items-center inline-flex' onClick={onClick}>
+		<div className='w-32 h-12 pt-1 flex-col justify-center items-center inline-flex bg-PrimaryFocus' onClick={onClick}>
 			<Image
 				className={`w-6 h-6`}
 				src={addSelected(src, selected)}
@@ -24,7 +24,7 @@ const TabBarButton = (props: TabBarButtonProps) => {
 			/>
 			<div
 				className={`w-12 h-3.5 text-center text-xs font-normal leading-snug ${
-					selected ? 'text-amber-400' : ''
+					selected ? 'text-AlertMain' : ''
 				}`}
 			>
 				{label}
