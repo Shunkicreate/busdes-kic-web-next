@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "startdev": "concurrently \"npm run dev\" \"npm run storybook\"",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -35,6 +36,7 @@
     "@storybook/nextjs": "^7.1.1",
     "@storybook/react": "^7.1.1",
     "@storybook/testing-library": "^0.2.0",
+    "concurrently": "^8.2.0",
     "eslint-plugin-storybook": "^0.6.13",
     "storybook": "^7.1.1",
     "webpack": "^5.88.2"

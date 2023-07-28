@@ -1,4 +1,4 @@
-import { TabBarProps } from '../entities/storybook/TabBar.type'
+import { TabBarProps } from '../../entities/storybook/TabBar.type'
 import TabBarButton from './TabBarButton'
 
 const TabBar = (props: TabBarProps) => {

@@ -1,4 +1,4 @@
-import { TabBarButtonProps } from '../entities/storybook/TabBarButton.type'
+import { TabBarButtonProps } from '../../entities/storybook/TabBarButton.type'
 import Image from 'next/image'
 
 
