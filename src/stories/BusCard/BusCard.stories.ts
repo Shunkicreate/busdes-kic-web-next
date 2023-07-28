@@ -15,7 +15,8 @@ export const Default = {
     args: {
         fr: "立命館大学",
         to: "京都駅",
-        direction: "50号系統 1番のりば",
+        BusName: "50号系統",
+        BusStop: "1",
         BusData: busDataSample,
     }
 }
@@ -24,6 +25,8 @@ export const NoBusData = {
     args: {
         fr: "立命館大学",
         to: "京都駅",
+        BusName: "50号系統",
+        BusStop: "1",
         direction: "50号系統 1番のりば",
         BusData: [],
     }

@@ -1,5 +1,6 @@
-type WaitingAreaProps = {
-    direction: string,
+import BusLineAndPickUpPointProps from "./BusLineAndPickUpPoint.type";
+
+interface WaitingAreaProps extends BusLineAndPickUpPointProps{
     BusData: ApproachingBusData[],
 }
 
