@@ -1,5 +1,6 @@
 import WaitingAreaProps from "@/entities/storybook/WaitingArea.type";
 import BusLineAndPickUpPoint from "./BusLineAndPickUpPoint";
+import BusCandidate from "./BusCandidate";
 
 const WaitingArea = (props: WaitingAreaProps) => {
 	const { BusData, BusName, BusStop } = props;
@@ -11,20 +12,7 @@ const WaitingArea = (props: WaitingAreaProps) => {
 			<div className='flex-col justify-start items-start gap-0.5 flex pb-3'>
 				{BusData.map((bus, i) => {
 					const { StartTime, EndTime, BusName, selected } = bus;
-					return (
-						<div className={`justify-start items-start gap-6 inline-flex ${selected ? "text-AlertMain" : ""}`} key={i}>
-							<div className={`justify-start items-start gap-1 flex`}>
-								<div className='text-center text-base font-normal leading-snug'>
-									{StartTime.getHours()}:{StartTime.getMinutes()}
-								</div>
-								<div className='text-center text-lg font-normal leading-snug'>→</div>
-								<div className='text-center text-base font-normal leading-snug'>
-									{EndTime.getHours()}:{EndTime.getMinutes()}
-								</div>
-							</div>
-							<div className='text-center text-sm font-normal leading-snug'>{BusName}</div>
-						</div>
-					);
+					return <BusCandidate StartTime={StartTime} EndTime={EndTime} BusName={BusName} selected={selected} key={i} />;
 				})}
 			</div>
 		</div>

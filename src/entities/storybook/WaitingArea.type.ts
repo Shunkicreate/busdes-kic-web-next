@@ -1,15 +1,8 @@
+import BusCandidateProps from "./BusCandidate.type";
 import BusLineAndPickUpPointProps from "./BusLineAndPickUpPoint.type";
 
 interface WaitingAreaProps extends BusLineAndPickUpPointProps{
-    BusData: ApproachingBusData[],
-}
-
-type ApproachingBusData = {
-    StartTime: Date,
-    EndTime: Date,
-    BusName: string,
-    selected: boolean,
-
+    BusData: BusCandidateProps[],
 }
 
 export default WaitingAreaProps;
