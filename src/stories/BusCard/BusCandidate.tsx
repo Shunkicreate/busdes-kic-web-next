@@ -8,7 +8,7 @@ const BusCandidate = (props: BusCandidateProps) => {
 			<div className={`justify-start items-start gap-1 flex`}>
 				<DisplayTime hour={StartTime.getHours()} minute={StartTime.getMinutes()} twStyle='text-base' />
 				<div className='text-center text-lg font-normal leading-snug'>→</div>
-				<DisplayTime hour={StartTime.getHours()} minute={StartTime.getMinutes()} twStyle='text-base' />
+				<DisplayTime hour={EndTime.getHours()} minute={EndTime.getMinutes()} twStyle='text-base' />
 			</div>
 			<div className='text-center text-sm m-auto'>{BusName}</div>
 		</button>
