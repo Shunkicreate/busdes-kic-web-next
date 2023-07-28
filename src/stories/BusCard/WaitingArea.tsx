@@ -8,7 +8,7 @@ const WaitingArea = (props: WaitingAreaProps) => {
 	if (BusData.length === 0) return <div>接近中のバスはありません</div>;
 	return (
 		<div className='w-80 px-10 pt-5 flex-col justify-start items-center gap-3 inline-flex bg-PrimaryFocus'>
-			<DisplayTime hour={0} minute={12} second={45} fontSize="text-4xl" />
+			<DisplayTime hour={0} minute={12} second={45} twStyle="text-4xl" />
 			<BusLineAndPickUpPoint BusName={BusName} BusStop={BusStop} />
 			<div className='flex-col justify-start items-start gap-0.5 flex pb-3'>
 				{BusData.map((bus, i) => {

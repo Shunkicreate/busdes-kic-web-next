@@ -1,7 +1,7 @@
 import DisplayTimeProps from "@/entities/storybook/DisplayTime/DisplayTime.type";
 
 const DisplayTime = (props: DisplayTimeProps) => {
-	const { hour, minute, second, millisecond, fontSize } = props;
+	const { hour, minute, second, millisecond, twStyle } = props;
 	const makePadZero = (num: number) => {
         if (num < 0) return "00";
 		return num.toString().padStart(2, "0");
@@ -14,7 +14,7 @@ const DisplayTime = (props: DisplayTimeProps) => {
 	};
 
 	return (
-		<div className={`${fontSize}`}>
+		<div className={`${twStyle}`}>
 			<span>{hour !== undefined ? makePadZero(hour) + addColon(minute) : <></>}</span>
 			<span>{minute !== undefined ? makePadZero(minute) + addColon(second) : <></>}</span>
 			<span>{second !== undefined ? makePadZero(second) + addComma(millisecond) : <></>}</span>

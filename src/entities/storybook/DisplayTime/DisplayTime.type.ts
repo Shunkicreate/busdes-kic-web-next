@@ -3,7 +3,7 @@ interface DisplayTimeProps {
     minute?: number;
     second?: number;
     millisecond?: number;
-    fontSize?: string;
+    twStyle?: string;
 }
 
 export default DisplayTimeProps;
