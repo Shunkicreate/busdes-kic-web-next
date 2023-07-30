@@ -7,7 +7,7 @@ const DisplayTime = (props: DisplayTimeProps) => {
 		return num.toString().padStart(2, "0");
 	};
 	const addColon = (num: number | undefined) => {
-		return num ? ":" : "";
+		return num !== undefined ? ":" : "";
 	};
 	const addComma = (num: number | undefined) => {
 		return num ? "." : "";
