@@ -5,7 +5,7 @@ import { memo } from "react";
 const DestinationArea = memo((props: DestinationAreaProps) => {
 	const { fr, to } = props;
 	return (
-		<div className='w-80 block  bg-PrimaryFocus'>
+		<div className=''>
 			<div className='grid grid-cols-11 py-4'>
 				<div className='col-start-1 col-end-6 text-center text-black text-lg font-normal leading-snug'>{fr}</div>
 				<Image
