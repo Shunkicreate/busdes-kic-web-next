@@ -14,7 +14,7 @@ const DestinationArea = memo((props: DestinationAreaProps) => {
 		}
 	};
 	return (
-		<button onClick={switchShow}>
+		<button onClick={switchShow} className="w-full">
 			<div className='grid grid-cols-7 gap-2 min-h-[4rem] h-fit place-content-center text-center'>
 				<div className={"text-xl col-span-3 my-auto " + showAllBusStopsParams}>{fr}</div>
 				<Image className='m-auto' src={"/images/arrayVector.svg"} alt='array vector image' width={40} height={5.5} />
