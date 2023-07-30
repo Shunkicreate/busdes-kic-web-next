@@ -3,7 +3,7 @@ import DisplayTimeProps from "@/entities/storybook/DisplayTime/DisplayTime.type"
 const DisplayTime = (props: DisplayTimeProps) => {
 	const { hour, minute, second, millisecond, twStyle } = props;
 	const makePadZero = (num: number) => {
-        if (num < 0) return "00";
+		if (num < 0) return "00";
 		return num.toString().padStart(2, "0");
 	};
 	const addColon = (num: number | undefined) => {

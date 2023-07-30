@@ -1,6 +1,8 @@
 import DestinationAreaProps from "@/entities/storybook/DestinationArea.type";
 import Image from "next/image";
-const DestinationArea = (props: DestinationAreaProps) => {
+import { memo } from "react";
+
+const DestinationArea = memo((props: DestinationAreaProps) => {
 	const { fr, to } = props;
 	return (
 		<div className='w-80 block  bg-PrimaryFocus'>
@@ -18,7 +20,7 @@ const DestinationArea = (props: DestinationAreaProps) => {
 			<div className='border border-stone-300'></div>
 		</div>
 	);
-};
+});
 
 export default DestinationArea;
 
