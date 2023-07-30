@@ -1,24 +1,29 @@
 import DestinationAreaProps from "@/entities/storybook/DestinationArea.type";
 import Image from "next/image";
-import { memo } from "react";
+import { memo, useState } from "react";
 
 const DestinationArea = memo((props: DestinationAreaProps) => {
 	const { fr, to } = props;
+	const [showAllBusStops, setShowAllBusStops] = useState(false);
+	const [showAllBusStopsParams, setShowAllBusStopsParams] = useState<"line-clamp-2" | "">("line-clamp-2");
+
+	const switchShow = () => {
+		setShowAllBusStops(!showAllBusStops);
+		if (showAllBusStops) {
+			setShowAllBusStopsParams("line-clamp-2");
+		} else {
+			setShowAllBusStopsParams("");
+		}
+	};
 	return (
-		<div className=''>
-			<div className='grid grid-cols-11 py-4'>
-				<div className='col-start-1 col-end-6 text-center text-black text-lg font-normal leading-snug'>{fr}</div>
-				<Image
-					className='col-start-6 m-auto'
-					src={"/images/arrayVector.svg"}
-					alt='array vector image'
-					width={40}
-					height={5.5}
-				/>
-				<div className='col-start-7 col-end-11 text-center text-black text-lg font-normal leading-snug'>{to}</div>
+		<button onClick={switchShow}>
+			<div className='grid grid-cols-7 gap-2 min-h-[4rem] h-fit place-content-center text-center'>
+				<div className={"text-xl col-span-3 my-auto " + showAllBusStopsParams}>{fr}</div>
+				<Image className='m-auto' src={"/images/arrayVector.svg"} alt='array vector image' width={40} height={5.5} />
+				<div className={"text-xl col-span-3 my-auto " + showAllBusStopsParams}>{to}</div>
 			</div>
 			<div className='border border-stone-300'></div>
-		</div>
+		</button>
 	);
 });
 
