@@ -4,7 +4,7 @@ import Image from "next/image";
 const TimeTableHeader = (props: TimeTableHeaderProps) => {
 	const { fr, to, switchBusStop } = props;
 	return (
-		<div className='w-full text-center top-12 pt-4 bg-main'>
+		<div className='w-full py-2 text-center bg-main relative'>
 			<div className='grid grid-cols-3'>
 				<div className=''>
 					<strong>出発</strong>
@@ -13,9 +13,7 @@ const TimeTableHeader = (props: TimeTableHeaderProps) => {
 					<strong>{fr}</strong>
 				</div>
 			</div>
-			<div>
-				<Image src={"/images/Arrow.svg"} alt='Arrow image' className='m-auto my-1' />
-			</div>
+			<Image src={"/images/Arrow.svg"} alt='Arrow image' width={16} height={16} className='m-auto my-1' />
 			<div className='grid grid-cols-3'>
 				<div className=''>
 					<strong>到着</strong>
@@ -24,11 +22,12 @@ const TimeTableHeader = (props: TimeTableHeaderProps) => {
 					<strong>{to}</strong>
 				</div>
 			</div>
-			<div className='absolute top-8 right-8 w-fit h-fit'>
-				<Image src={"/images/ReverseButton.svg"} alt='' onClick={switchBusStop} />
+			<div className='absolute top-0 bottom-0 right-8 my-auto w-fit h-fit'>
+				<Image src={"/images/ReverseButton.svg"} alt='' width={32} height={32} onClick={switchBusStop} />
 			</div>
 		</div>
 	);
 };
 
 export default TimeTableHeader;
+
