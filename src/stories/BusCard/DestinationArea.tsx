@@ -4,15 +4,13 @@ import { memo, useState } from "react";
 
 const DestinationArea = memo((props: DestinationAreaProps) => {
 	const { fr, to } = props;
-	const [showAllBusStops, setShowAllBusStops] = useState(false);
-	const [showAllBusStopsParams, setShowAllBusStopsParams] = useState<"line-clamp-2" | "">("line-clamp-2");
+	const [showAllBusStopsParams, setShowAllBusStopsParams] = useState<"line-clamp-2" | null>("line-clamp-2");
 
 	const switchShow = () => {
-		setShowAllBusStops(!showAllBusStops);
-		if (showAllBusStops) {
+		if (!showAllBusStopsParams) {
 			setShowAllBusStopsParams("line-clamp-2");
 		} else {
-			setShowAllBusStopsParams("");
+			setShowAllBusStopsParams(null);
 		}
 	};
 	return (
