@@ -7,10 +7,9 @@ export default {
 
 export const Default = {
 	args: {
-		hour: 1,
-		minute: 2,
-		second: 3,
-		millisecond: 46,
-		fontSize: "text-4xl",
+		fr: "立命館大学",
+		to: "京都駅",
+		BusStops: ["立命館大学", "京都駅"],
 	},
 };
+
