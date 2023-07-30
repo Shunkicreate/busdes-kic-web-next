@@ -1,3 +1,4 @@
+"use client";
 import BusStopSelectBoxProps from "@/entities/storybook/TimeTable/BusStopSelectBox.type";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";

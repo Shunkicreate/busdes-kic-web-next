@@ -1,3 +1,4 @@
+"use client"
 import TimeTableHeaderProps from "@/entities/storybook/TimeTable/TimeTableHeader.type";
 import Image from "next/image";
 

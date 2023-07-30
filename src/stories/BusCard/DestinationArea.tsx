@@ -1,3 +1,4 @@
+"use client"
 import DestinationAreaProps from "@/entities/storybook/DestinationArea.type";
 import Image from "next/image";
 import { memo, useState } from "react";

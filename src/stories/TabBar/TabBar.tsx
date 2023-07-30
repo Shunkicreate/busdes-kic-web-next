@@ -2,7 +2,7 @@ import { TabBarProps } from '../../entities/storybook/TabBar.type'
 import TabBarButton from './TabBarButton'
 
 const TabBar = (props: TabBarProps) => {
-	const { selectedPage, onClick } = props
+	const { selectedPage } = props
 	return (
 		<div>
 			<TabBarButton
