@@ -9,7 +9,8 @@
     "startdev": "concurrently \"npm run dev\" \"npm run storybook\"",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_bda32ca0ca7f7ca"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -43,9 +44,12 @@
     "@storybook/test-runner": "^0.12.0",
     "@storybook/testing-library": "^0.2.0",
     "axe-playwright": "^1.2.3",
+    "chromatic": "^6.20.0",
     "concurrently": "^8.2.0",
     "eslint-plugin-storybook": "^0.6.13",
     "storybook": "^7.1.1",
     "webpack": "^5.88.2"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "busdes-kic-web-next@0.1.0"
 }

@@ -260,7 +260,7 @@ const OneTimeTable: TimeTableHoursProps = {
 	],
 };
 
-export const TimeTableData: TimeTableHoursProps[] = [
+const TimeTableData: TimeTableHoursProps[] = [
 	OneTimeTable,
 	OneTimeTable,
 	OneTimeTable,
