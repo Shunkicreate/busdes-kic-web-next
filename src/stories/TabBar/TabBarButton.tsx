@@ -2,11 +2,20 @@ import { TabBarButtonProps } from '../../entities/storybook/TabBarButton.type'
 import Image from 'next/image'
 
 
-//文字列の拡張子の前にSelectedをつける関数
+// This code replaces the extension of a file with "Selected" if a boolean is true.
+// The function is called addSelected, and it takes two arguments: str and execute.
+// str is a string and execute is a boolean.
+// If execute is true, then the function will split str into two parts: fileName and extension.
+// If execute is false, then the function will return str unchanged.
+// If str is not in the format "fileName.extension", then the function will return str unchanged.
+// Otherwise, the function will return "fileNameSelected.extension".
 const addSelected = (str: string, execute: boolean) => {
-	if(!execute) return str
+    if(!execute) return str
 	const arr = str.split('.')
-	return arr[0] + 'Selected.' + arr[1]
+	if(arr.length !== 2) return str
+	const fileName = arr[0]
+	const extension = arr[1]
+	return `${fileName}Selected.${extension}`
 }
 
 
