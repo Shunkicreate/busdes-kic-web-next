@@ -9,8 +9,6 @@ export interface TabBarButtonProps {
 	src: string
 	//背景色
 	backgroundColor?: string
-	//選択中かどうか
-	selected: boolean
 	//クリック時のイベント
 	onClick?: () => void
 }

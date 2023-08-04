@@ -11,7 +11,6 @@ export const Default = {
 		label: '次のバス',
 		alt: '路線追加ページへのボタンの画像',
 		src: '/images/timer.svg',
-		selected: true,
 	},
 }
 
