@@ -10,7 +10,8 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_bda32ca0ca7f7ca"
+    "chromatic": "npx chromatic --project-token=chpt_bda32ca0ca7f7ca",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -34,6 +35,7 @@
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^7.1.1",
+    "@storybook/addon-coverage": "^0.0.9",
     "@storybook/addon-essentials": "^7.1.1",
     "@storybook/addon-interactions": "^7.1.1",
     "@storybook/addon-links": "^7.1.1",
