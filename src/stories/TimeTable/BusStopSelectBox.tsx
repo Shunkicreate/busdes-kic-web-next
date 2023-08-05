@@ -3,16 +3,16 @@ import BusStopSelectBoxProps from "@/entities/storybook/TimeTable/BusStopSelectB
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import { rgbToHex } from "@mui/material";
 
 const BusStopSelectBox = (props: BusStopSelectBoxProps) => {
 	const { BusStops, value, handleChange } = props;
 	return (
-		<div className='bg-main w-full'>
-			<Box sx={{ width: "100%", indicatorColor: "#FFE600", color: "#FFE600", fontWeight: "bolder" }}>
+		<div className='w-full'>
+			<Box sx={{ width: "100%",fontWeight: "bolder" }}>
 				<Tabs
 					value={value}
 					onChange={(e, newTab) => handleChange(newTab)}
-					TabIndicatorProps={{ style: { backgroundColor: "#000" } }}
 					variant='scrollable'
 					allowScrollButtonsMobile
 					sx={{
@@ -21,13 +21,14 @@ const BusStopSelectBox = (props: BusStopSelectBoxProps) => {
 					}}
 				>
 					{BusStops.map((BusStop, i) => {
+						const childrenJSX = <span>{BusStop}</span>
 						return (
 							<Tab
 								label={BusStop}
 								key={i}
 								value={i}
 								sx={{
-									color: "#0000004d",
+									// color: "#0000004d",
 									fontWeight: "bolder",
 									"&.Mui-selected": {
 										color: "#000",
