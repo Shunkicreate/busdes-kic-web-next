@@ -10,7 +10,7 @@ const BusStopSelectBox = (props: BusStopSelectBoxProps) => {
 			<Box sx={{ width: "100%" }}>
 				<Tabs
 					value={value}
-					onChange={(e, newTab) => handleChange(newTab)}
+					onChange={(e, tabValue: number) => handleChange(tabValue)}
 					variant='scrollable'
 					allowScrollButtonsMobile
 					sx={{
