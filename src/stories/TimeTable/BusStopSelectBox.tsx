@@ -3,39 +3,92 @@ import BusStopSelectBoxProps from "@/entities/storybook/TimeTable/BusStopSelectB
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import { rgbToHex } from "@mui/material";
+import { Button, rgbToHex, styled, touchRippleClasses } from "@mui/material";
+import { keyframes } from "@mui/system";
 
 const BusStopSelectBox = (props: BusStopSelectBoxProps) => {
 	const { BusStops, value, handleChange } = props;
+	// 	const enterKeyframe = keyframes`
+	// 	0% {
+	//     transform: scale(0);
+	//     opacity: 0.5;
+	// }
+	// 100% {
+	// 	transform: scale(1);
+	//     opacity: 0.8;
+	// }
+	// `;
+	// 	const CustomButton = styled(Button)(`
+	// & .${touchRippleClasses.rippleVisible} {
+	// opacity: 0.5;
+	// animation-name: ${enterKeyframe};
+	// }
+	// `);
+	// 	const a11yCompleteTab = styled(Tab)(
+	// 		`& .${touchRippleClasses.rippleVisible} {
+	//     opacity: 0.5;
+	//     animation-name: ${enterKeyframe};
+	// }
+	// `
+	// 	);
 	return (
-		<div className='w-full'>
-			<Box sx={{ width: "100%",fontWeight: "bolder" }}>
-				<Tabs
-					value={value}
-					onChange={(e, newTab) => handleChange(newTab)}
-					variant='scrollable'
-					allowScrollButtonsMobile
-					sx={{
-						color: "#000",
-						fontWeight: "bolder",
-					}}
-				>
+		// 		<div className='w-full'>
+		// 			<Box sx={{ width: "100%",fontWeight: "bolder" }}>
+		// 				<Tabs
+		// 					value={value}
+		// 					onChange={(e, newTab) => handleChange(newTab)}
+		// 					variant='scrollable'
+		// 					allowScrollButtonsMobile
+		// 					sx={{
+		// 						color: "#000",
+		// 						fontWeight: "bolder",
+		// 					}}
+		// 				>
+		// 					{BusStops.map((BusStop, i) => {
+		// 						const childrenJSX = <span>{BusStop}</span>
+		// 						return (
+		// 							<Tab
+		// 								label={BusStop}
+		// 								key={i}
+		// 								value={i}
+		// 								sx={{
+		// 									// color: "#0000004d",
+		// 									fontWeight: "bolder",
+		// 									"&.Mui-selected": {
+		// 										color: "#000",
+		// 										borderColor: "transparent",
+		// 									},
+		// 								}}
+		// 							></Tab>
+		// 						);
+		// 					})}
+		// 				</Tabs>
+		// 			</Box>
+		// 		</div>
+		// div className='w-full'>
+		<div>
+			<Box sx={{ width: "100%", fontWeight: "bolder" }}>
+				<Tabs value={value} onChange={() => handleChange} aria-label='basic tabs example'>
 					{BusStops.map((BusStop, i) => {
-						const childrenJSX = <span>{BusStop}</span>
 						return (
 							<Tab
 								label={BusStop}
-								key={i}
 								value={i}
 								sx={{
-									// color: "#0000004d",
-									fontWeight: "bolder",
-									"&.Mui-selected": {
+									color: "blue",
+									// "MuiTab-root": {
+									// 	color: "#000",
+									// },
+									"& .rippleVisible": {
 										color: "#000",
-										borderColor: "transparent",
+										backgroundColor: "green",
+									},
+									"&.MuiTouchRipple-root": {
+										color: "red",
+										backgroundColor: "red",
 									},
 								}}
-							></Tab>
+							/>
 						);
 					})}
 				</Tabs>
@@ -43,6 +96,5 @@ const BusStopSelectBox = (props: BusStopSelectBoxProps) => {
 		</div>
 	);
 };
-
 export default BusStopSelectBox;
 
