@@ -14,9 +14,9 @@ const BusStopSelectBox = (props: BusStopSelectBoxProps) => {
 					variant='scrollable'
 					allowScrollButtonsMobile
 					sx={{
-					".MuiTabs-indicator": {
-						backgroundColor: "#373737",
-					},	
+						".MuiTabs-indicator": {
+							backgroundColor: "#373737",
+						},
 					}}
 				>
 					{BusStops.map((BusStop, i) => {
