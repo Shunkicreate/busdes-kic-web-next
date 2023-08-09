@@ -41,3 +41,32 @@ export const Prod: Story = {
 	},
 };
 
+export const ClickText: Story = {
+	args: {
+		BusStops: ["立命館大学前1", "立命館大学前2", "立命館大学前3", "立命館大学前4"],
+	},
+	render: (args) => {
+		const { BusStops } = args;
+		const [value, setValue] = useState(0);
+		return <BusStopSelectBox BusStops={BusStops} value={value} handleChange={setValue} />;
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement);
+		userEvent.click(canvas.getByText("立命館大学前1"));
+		await sleep(100);
+		userEvent.click(canvas.getByText("立命館大学前2"));
+		await sleep(100);
+		userEvent.click(canvas.getByText("立命館大学前2"));
+		await sleep(100);
+		userEvent.click(canvas.getByText("立命館大学前3"));
+		await sleep(100);
+		userEvent.click(canvas.getByText("立命館大学前2"));
+		await sleep(100);
+		userEvent.click(canvas.getByText("立命館大学前3"));
+		await sleep(100);
+		userEvent.click(canvas.getByText("立命館大学前2"));
+		await sleep(100);
+		userEvent.click(canvas.getByText("立命館大学前3"));
+	},
+};
+
